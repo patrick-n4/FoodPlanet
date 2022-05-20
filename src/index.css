@@ -1,3 +1,145 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.orders-page{
+    background-color: #F6F7FB;
+}
+
+.order{
+    display: block;
+}
+
+#stats{
+    display: flex;
+}
+
+.orderList, .theOrder, .price{
+    display: flex;
+}
+
+div#order-bar{
+    background-color: #ff8c1a;
+    border-radius: 12px 12px 0px 0px;
+    margin-bottom: 20px;
+    margin: auto;
+    width: 80%;
+}
+
+.filter-order{
+    display: inline;
+    float: right;
+    background-color: #fcfcfc;
+    color: black;
+    font-size: 1em;
+    margin-right: 70px;
+    margin-bottom: 16px;
+    padding: 8px;
+    width: 100px;
+    border-radius: 7px;
+}
+
+.filter-order:focus{
+    background-color: #000;
+    color: white;
+}
+
+#order-bar h2{
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: white;
+    vertical-align: middle;
+}
+
+div.orderContainer{
+    border-radius: 5px;
+    background-color: #fff;
+    border: 0.25px solid #000;
+    margin: 5px auto 5px auto;
+    background: rgba(98, 4, 9, 0.03);
+}
+
+div.orderList{
+    display: block;
+}
+
+#new-order{
+    background-color:rgba(255, 255, 255, 0.963);
+    float: right;
+    margin-left: 70%;
+    margin-bottom: 30px;
+    margin-right: 40px;
+    display: inline;
+    width: 20%;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    padding-bottom: 6px;
+    padding: 8px;
+}
+
+button.newitem{
+    background-color: #ff8c1a;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px;
+    width: 70px;
+    text-align: center;
+    position: absolute;
+    left: 82.5%;
+    margin-left: 5em;
+}
+
+.order-items{
+    margin: 5px;
+}
+
+.order-card-title{
+    font-size: large;
+    font-weight: 700;
+    text-align: center;
+}
+
+#stats{
+    background-color: #fff;
+    max-width: 50%;
+    display: flex;
+    padding: 5px;
+}
+
+.orderContainer{
+    width: 80%;
+    margin-bottom: 5px;
+    margin: auto;
+}
+
+span.statistics{
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align: center;
+    margin: 12.5px auto auto 66.25px;
+    display: block;
+}
+
+.statNumbers{
+    text-align: center;
+ }
+
+ .orderList{
+    background-color: rgba(98, 4, 9, 0.03);
+    float:left;
+ }
+
+ .orderList{
+    background-color: #0f0;
+    width: 75em;
+    padding: 20px 20px 20px 20px;
+    margin: 2em;
+ }
+
+ div.orderBox div{
+     display: flex;
+     padding: 1em;
+     margin-left: 2em;
+ }

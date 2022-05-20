@@ -1,6 +1,6 @@
 import React from 'react'
 import Navigation from '../../Components/Navigation'
-import Bottomer from '../../Components/Bottomer'
+import Bottomer from '../../Components/Footer'
 import Quotations from '../../IMAGES/Quotations'
 import People from '../../IMAGES/people_eating.png'
 import Bulb from '../../IMAGES/Bulb.jsx'

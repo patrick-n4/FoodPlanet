@@ -42,13 +42,13 @@ function Login() {
   }
   
   return (
-    <div className="w-full h-full flex justify-center">
+    <div className="w-full h-full flex justify-center items-center">
         <div className={`bg-[#cd8f40] w-1/2 h-full ${width ?    'hidden' : 'flex'} flex-col items-center justify-center`}>
             <img className="h-[34rem]" alt="background" src={Background}/>
             <h1 className="font-bold text-4xl w-[15rem] text-center text-white py-10">Get your food prepared</h1>
         </div>
         <form onSubmit={post} className=" w-1/2 gap-10 flex flex-col items-center justify-center">
-            <img alt="logo" className="min-h-[10rem] min-w-[10rem]" src={Logo}/>
+            <img alt="logo" className="min-h-[1rem] min-w-[8rem]" src={Logo}/>
             <h1 className="text-3xl font-bold text-center">Login to your account </h1>
             {err && <Alert severity="error">{err}</Alert>}
             <div className={`flex flex-col ${!width ? 'w-[25rem]' : 'w-[150%]'} gap-5 mx-3`}>

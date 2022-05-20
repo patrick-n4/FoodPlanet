@@ -9,15 +9,26 @@ import MenuPage from "./Same Format/MenuPage";
 import OrdersPage from "./Same Format/OrdersPage";
 import AddClientPage from "./Same Format/AddClientPage";
 import HomePage from "./DifferentFormat/HomePage";
-import LoginPage from "./DifferentFormat/LoginPage";
-import SignupPage from "./DifferentFormat/SignUpPage";
+import Login from "./DifferentFormat/Login";
+import Signup from "./DifferentFormat/Signup";
+import First from './DifferentFormat/First'
 export default function AllPage() {
+  if(<Route path="/landing"></Route>){
+    return (
+      <Router>
+        <Routes>
+          <Route path="/landing" element={<First/>}></Route>
+        </Routes>
+      </Router>
+    )
+  }
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Login" element={<LoginPage />} />
-        <Route path="/Signup" element={<SignupPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/landing" element={<First />} /> */}
       </Routes>
       <div className="bg-white w-[100%] h-[220vh] flex flex-col">
         <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">

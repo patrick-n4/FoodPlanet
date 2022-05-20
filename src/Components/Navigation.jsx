@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 function Navigation() {
   const navs = ["Product", "Pricing", "Blog"]
   return (
-    <div className="flex fixed w-full py-3 items-center bg-white shadow-md px-10 justify-between">
+    <div className="flex z-50 fixed w-full py-3 items-center bg-white shadow-md px-10 justify-between">
         <img className="h-[4rem]" src={Logo} alt="logo"/>
         <div className="flex items-center gap-10">
             {navs.map((nav, index)=>(

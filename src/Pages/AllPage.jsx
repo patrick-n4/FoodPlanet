@@ -24,7 +24,7 @@ export default function AllPage() {
           <LeftNavBar logo={Logo} />
           <Routes>
             <Route path="/Overview" element={<OverViewPage />} />
-            <Route path="/Order" element={<OrdersPage />} />
+            <Route path="/Orders" element={<OrdersPage />} /> 
             <Route path="/Addclient" element={<AddClientPage />} />
             <Route path="/Client" element={<ClientPage />} />
             <Route path="/Menu" element={<MenuPage />} />

@@ -11,7 +11,7 @@ import AddClientPage from "./Same Format/AddClientPage";
 import HomePage from "./DifferentFormat/Home";
 import LoginPage from "./DifferentFormat/Login";
 import SignupPage from "./DifferentFormat/Signup";
-import PageNotFound from "./DifferentFormat/Pagenotfound";
+import PageNotFound from "./DifferentFormat/PageNotFound";
 
 export default function AllPage() {
   return (

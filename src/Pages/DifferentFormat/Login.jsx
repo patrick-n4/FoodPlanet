@@ -43,7 +43,7 @@ function Login() {
   
   return (
     <div className="w-full h-full flex justify-center items-center">
-        <div className={`bg-[#cd8f40] w-1/2 h-full ${width ?    'hidden' : 'flex'} flex-col items-center justify-center`}>
+        <div className={`bg-[#cd8f40] w-1/2 h-[100vh] ${width ?    'hidden' : 'flex'} flex-col items-center justify-center`}>
             <img className="h-[34rem]" alt="background" src={Background}/>
             <h1 className="font-bold text-4xl w-[15rem] text-center text-white py-10">Get your food prepared</h1>
         </div>

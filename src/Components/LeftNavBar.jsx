@@ -1,7 +1,7 @@
 import React from "react";
 export default function TopNav({ logo }) {
   return (
-    <div className="w-[15%] h-[100vh] bg-black flex flex-col gap-3 sticky top-0">
+    <div className="w-[15%] h-[100vh] bg-black flex flex-col gap-3 sticky top-0 ">
       <img
         src={logo}
         alt="Logo Image"
@@ -44,7 +44,7 @@ export default function TopNav({ logo }) {
           </span>
           <div className="text-[1em] text-white">My Account</div>
         </div>
-        <div className="h-[25.7%] w-[100%] flex flex-row justify-evenly items-center bg-white border">
+        <div className="h-[8%] w-[100%] flex flex-row justify-evenly items-center bg-white border absolute bottom-0">
           <a href="https://www.facebook.com/" target="_blank">
             <i className="fa-brands fa-facebook text-black text-[2em]"></i>
           </a>

@@ -59,12 +59,12 @@ function Signup() {
   const inputs = ["Firstname", "Lastname", "Email", "Phone", "Password", "Confirm"]
   return (
     <div className="w-full h-full flex justify-center">
-        <div className={`bg-[#cd8f40] w-1/2 h-full ${width ? 'hidden' : 'flex'} flex-col items-center justify-center`}>
+        <div className={`bg-[#cd8f40] w-1/2 h-[100vh] ${width ? 'hidden' : 'flex'} flex-col items-center justify-center`}>
             <img className="h-[34rem]" alt="background" src={Background}/>
             <h1 className="font-bold text-4xl w-[15rem] text-center text-white py-10">Get your food prepared</h1>
         </div>
         <form onSubmit={post} className=" w-1/2 gap-10 flex flex-col items-center justify-center">
-            <img alt="logo" className="min-h-[10rem] min-w-[10rem]" src={Logo}/>
+            <img alt="logo" className="min-h-[5xrem] min-w-[5rem]" src={Logo}/>
             <h1 className="text-3xl font-bold text-center">Create your own account </h1>
             {err && <Alert severity="error">{err}</Alert>}
             <div className="flex gap-2 min-w-full overflow-hidden">

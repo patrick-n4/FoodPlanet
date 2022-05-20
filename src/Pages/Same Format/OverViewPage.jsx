@@ -10,7 +10,8 @@ export default function OverViewPage() {
   const [money, setMoney] = useState(1350460);
   const [orderPerHour, setOrderPerHour] = useState(
     Math.floor(orders / 60) * 24
-  );
+  );  
+
   const usFormat = new Intl.NumberFormat("en-us");
   const availableItems = 247;
   const [activeClients, setActiveClients] = useState(307);
@@ -22,25 +23,25 @@ export default function OverViewPage() {
   ];
   function handlePending(name) {
     return (
-      <div className="bg-white shadow-lg rounded-md flex flex-col gap-3 my-5 p-[2em]">
-        <div className="h-[35%] flex flex-col gap-[1em]">
-          <div className="flex flex-row justify-between items-center">
-            <span className="font-bold text-[2.3em]">{name}</span>
-            <span className="font-bold text-[1.2em] text-[#EFA129]">
+      <div className="bg-white shadow-lg rounded-md flex flex-col gap-3 my-3 p-[2em]">
+        <div className="h-[30%] flex flex-col gap-[1em]">
+          <div className="flex flex-row justify-between items-center h-[60%]">
+            <span className="font-bold text-[2em]">{name}</span>
+            <span className="font-bold text-[1em] text-[#EFA129]">
               View details
             </span>
           </div>
-          <div>
-            <span className="font-bold text-[1.2em] ">Sales</span>
+          <div className="h-[40%] w-100%">
+            <span className="font-bold text-[1em] ">Sales</span>
           </div>
         </div>
         <div className="h-[24%] flex flex-row items-center justify-between border-b-4 border-[#EFA129]">
-          <div className="font-bold text-[1.2em] opacity-50">Chicken</div>
-          <div className="font-bold text-[1.5em]">52,000 RWF</div>
+          <div className="font-bold text-[1em] opacity-50">Chicken</div>
+          <div className="font-bold text-[1.3em]">52,000 RWF</div>
         </div>
         <div className=" h-[30%] flex flex-row items-center justify-between">
-          <div className="font-bold text-[1.2em] opacity-50">Soy</div>
-          <div className="font-bold text-[1.5em]">15,000 RWF</div>
+          <div className="font-bold text-[1.em] opacity-50">Soy</div>
+          <div className="font-bold text-[1.3em]">15,000 RWF</div>
         </div>
       </div>
     );
@@ -49,10 +50,10 @@ export default function OverViewPage() {
     return (
       <div className=" w-[100%] h-[20%] flex flex-row justify-between items-center">
         <div className="flex flex-row  items-center w-[50%] gap-[1.3em]">
-          <input type="checkbox" className="w-[1.5em] h-[1.5em]" />
-          <span className="font-bold text-[1.5em]">{name}</span>
+          <input type="checkbox" className="w-[1.5em] h-[1em]" />
+          <span className="font-bold text-[1.3em]">{name}</span>
         </div>
-        <div className="bg-[#EFA129] text-white font-bold p-1 rounded-md text-[1.2em]">
+        <div className="bg-[#EFA129] text-white font-bold p-[0.1em] rounded-md text-[1em]">
           NEW
         </div>
       </div>
@@ -60,32 +61,32 @@ export default function OverViewPage() {
   }
 
   return (
-    <div className="flex flex-col w-[80%] h-[100%]">
+    <div className="flex flex-col w-[85%] h-[100%]">
       <TopNav title="Overview" />
       <div className="h-[15%] flex flex-row gap-5 items-center justify-between mx-[2em]">
-        <div className="bg-white w-[25%] h-[65%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center ">
-          <span className="text-[1.5em] font-bold opacity-50">Clients</span>
-          <span className="text-[3em] font-bold">{clients}</span>
+        <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center ">
+          <span className="text-[1.3em] font-bold opacity-50">Clients</span>
+          <span className="text-[2.5em] font-bold">{clients}</span>
         </div>
-        <div className="bg-white w-[25%] h-[65%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
-          <span className="text-[1.5em] font-bold ">Revenue (FRW) </span>
-          <span className="text-[3em] font-bold">{usFormat.format(money)}</span>
+        <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
+          <span className="text-[1.2em] font-bold ">Revenue (FRW) </span>
+          <span className="text-[2.5em] font-bold">{usFormat.format(money)}</span>
         </div>
-        <div className="bg-white w-[25%] h-[65%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
-          <span className="text-[1.5em] font-bold opacity-50">Orders</span>
-          <span className="text-[3em] font-bold">{orders}</span>
+        <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
+          <span className="text-[1.3em] font-bold opacity-50">Orders</span>
+          <span className="text-[2.5em] font-bold">{orders}</span>
         </div>
-        <div className="bg-white w-[25%] h-[65%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
-          <span className="text-[1.5em] font-bold opacity-50">Delivered</span>
-          <span className="text-[3em] font-bold">{deliver}</span>
+        <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
+          <span className="text-[1.3em] font-bold opacity-50">Delivered</span>
+          <span className="text-[2.5em] font-bold">{deliver}</span>
         </div>
       </div>
       <div className="w-[100%] h-[45%] mr-[2em] flex flex-row px-[2em] justify-between ">
-        <div className="w-[65%] bg-black h-[90%]">
-          <img src={Image} alt="Image" className="h-[100%] w-[100%] " />
+        <div className="w-[60%] h-[90%] flex items-end">
+          <img src={Image} alt="Image" className="h-[90%] w-[90%]" />
         </div>
-        <div className="w-[30%] h-[90%] bg-white rounded-md flex flex-col divide-y-4 py-[2em] shadow-xl">
-          <div className="flex flex-col justify-center items-center w-[100%] gap-2 ">
+        <div className="w-[30%] h-[95%] bg-white rounded-md flex flex-col  py-[2em] shadow-xl">
+          <div className="flex flex-col justify-center items-center w-[100%] ">
             {listActive.map((data, key) => {
               if (key === 0) {
                 return (
@@ -177,12 +178,12 @@ export default function OverViewPage() {
           {handleCreate("Cafes")}
           <div className=" w-[100%] h-[20%] flex flex-row justify-between items-center">
             <div className="flex flex-row  items-center w-[50%] gap-[1.3em]">
-              <input type="checkbox" className="w-[1.5em] h-[1.5em] " />
-              <span className="font-bold text-[1.5em] flex float-left">
+              <input type="checkbox" className="w-[1.5em] h-[1em] " />
+              <span className="font-bold text-[1.3em] flex float-left">
                 Pub
               </span>
             </div>
-            <div className="bg-[#CCC] text-black font-bold p-1 rounded-md text-[1.2em]">
+            <div className="bg-[#CCC] text-black font-bold p-[0.1em] rounded-md text-[1em]">
               DEFAULT
             </div>
           </div>

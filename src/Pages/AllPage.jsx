@@ -8,18 +8,18 @@ import ClientPage from "./Same Format/ClientPage";
 import MenuPage from "./Same Format/MenuPage";
 import OrdersPage from "./Same Format/OrdersPage";
 import AddClientPage from "./Same Format/AddClientPage";
-import HomePage from "./DifferentFormat/HomePage";
-import LoginPage from "./DifferentFormat/LoginPage";
-import SignupPage from "./DifferentFormat/SignUpPage";
+import HomePage from "./DifferentFormat/Home";
+import LoginPage from "./DifferentFormat/Login";
+import SignupPage from "./DifferentFormat/Signup";
 import PageNotFound from "./DifferentFormat/PageNotFound";
+
 export default function AllPage() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Login" element={<LoginPage />} />
-        <Route path="/404" element={<PageNotFound />} />
-        <Route path="/SignUp" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
         <Route
           path="pages/overview"
           element={
@@ -80,6 +80,7 @@ export default function AllPage() {
             </div>
           }
         />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   );

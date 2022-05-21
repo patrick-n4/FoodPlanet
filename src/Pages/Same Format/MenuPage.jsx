@@ -152,6 +152,8 @@ export default function MenuPage() {
       type: "Dessert"
     }
   ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [bgButton, setBgBtn] = useState(true);
   const [copyMenuList, setCopyMenuList] = useState(menuLists);
   const buttons = [
     {
@@ -159,6 +161,8 @@ export default function MenuPage() {
       handleBtn: () => {
         let all = menuLists.filter((data) => menuLists);
         setCopyMenuList((data) => all);
+        setCurrentIndex((index) => 0);
+        setBgBtn((bg) => bg);
       }
     },
     {
@@ -166,6 +170,8 @@ export default function MenuPage() {
       handleBtn: () => {
         let result = menuLists.filter((data) => data.type === "Drink");
         setCopyMenuList((data) => result);
+        setCurrentIndex((index) => 1);
+        setBgBtn((bg) => bg);
       }
     },
     {
@@ -173,6 +179,8 @@ export default function MenuPage() {
       handleBtn: () => {
         let result = menuLists.filter((data) => data.type === "Starter");
         setCopyMenuList((data) => result);
+        setBgBtn((bg) => bg);
+        setCurrentIndex((index) => 2);
       }
     },
     {
@@ -180,6 +188,8 @@ export default function MenuPage() {
       handleBtn: () => {
         let result = menuLists.filter((data) => data.type === "Appetizer");
         setCopyMenuList((data) => result);
+        setCurrentIndex((index) => 3);
+        setBgBtn((bg) => bg);
       }
     },
     {
@@ -187,6 +197,8 @@ export default function MenuPage() {
       handleBtn: () => {
         let result = menuLists.filter((data) => data.type === "Dessert");
         setCopyMenuList((data) => result);
+        setCurrentIndex((index) => 4);
+        setBgBtn((bg) => bg);
       }
     },
     {
@@ -194,12 +206,15 @@ export default function MenuPage() {
       handleBtn: () => {
         let result = menuLists.filter((data) => data.type === "Main");
         setCopyMenuList((data) => result);
+        setCurrentIndex((index) => 5);
+        setBgBtn((bg) => bg);
       }
     }
   ];
   useEffect(() => {}, [copyMenuList]);
+  useEffect(() => {}, [currentIndex]);
   return (
-    <div className="flex flex-col w-[80%] h-[100%]">
+    <div className="flex flex-col w-[85%] h-[100%]">
       <TopNav title="MenuPage" />
       <div className="flex flex-row h-full ml-[2em] gap-2">
         <div className="w-[75%] h-full">
@@ -208,9 +223,13 @@ export default function MenuPage() {
               {buttons.map((data, index) => {
                 return (
                   <button
-                    className="hover:bg-[#F39401]  hover:text-white text-[#F39401] rounded-md px-[1.5em] text-[1.3em] py-[0.5em] border border-[#F39401] focus:bg-[#F39401] focus:text-white"
-                    key={index}
                     onClick={data.handleBtn}
+                    className={`rounded-md px-[1.5em] text-[1.3em] py-[0.5em] border border-[#F39401] ${
+                      index === currentIndex
+                        ? "bg-[#F39401] text-white"
+                        : "bg-white text-[#F39401]"
+                    }`}
+                    key={index}
                   >
                     {data.btn}
                   </button>
@@ -226,7 +245,9 @@ export default function MenuPage() {
           <div className="flex h-[100%] pl-[2em] gap-4 mt-[2em] overflow-auto">
             <div className="w-[100%] flex flex-col gap-[2em]">
               {copyMenuList.length === 0 ? (
-                <div className="font-bold text-[1.5em] opacity-60 text-[red]">Sorry there is no data for this branch</div>
+                <div className="font-bold text-[1.5em] opacity-60 text-[red]">
+                  Sorry there is no data for this branch
+                </div>
               ) : (
                 copyMenuList.map((data, index) => {
                   return (

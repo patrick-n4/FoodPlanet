@@ -165,7 +165,7 @@ export default function OverViewPage() {
               Today
             </div>
             <div className="flex flex-row justify-between items-center h-[40%]">
-              <span className="font-bold text-[1.3em] text-[#47DF00]">
+              <span className="font-bold text-[1.35em] text-[#EFA129]">
                 Create new
               </span>
               <span className="material-symbols-outlined font-bold text-[1.8em] bg-[#EFA129] rounded-sm text-black">

@@ -214,7 +214,7 @@ export default function MenuPage() {
   useEffect(() => {}, [copyMenuList]);
   useEffect(() => {}, [currentIndex]);
   return (
-    <div className="flex flex-col w-[85%] h-[100%]">
+    <div className="flex flex-col w-[85%] h-[87.6%]">
       <TopNav title="MenuPage" />
       <div className="flex flex-row h-full ml-[2em] gap-2">
         <div className="w-[75%] h-full">

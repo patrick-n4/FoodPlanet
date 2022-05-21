@@ -6,6 +6,7 @@ export default function AddClient() {
   return (
     <div className="flex flex-col w-[80%] h-[100%]">
       <TopNav title="Add Client"/>
+      //Write you code here
     </div>
   );
 }

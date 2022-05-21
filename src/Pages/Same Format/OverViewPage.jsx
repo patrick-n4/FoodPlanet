@@ -66,24 +66,24 @@ export default function OverViewPage() {
       <div className="h-[15%] flex flex-row gap-5 items-center justify-between mx-[2em]">
         <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center ">
           <span className="text-[1.3em] font-bold opacity-50">Clients</span>
-          <span className="text-[2.5em] font-bold">{clients}</span>
+          <span className="text-[3em] font-bold">{clients}</span>
         </div>
         <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
           <span className="text-[1.2em] font-bold ">Revenue (FRW) </span>
-          <span className="text-[2.5em] font-bold">{usFormat.format(money)}</span>
+          <span className="text-[3em] font-bold">{usFormat.format(money)}</span>
         </div>
         <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
           <span className="text-[1.3em] font-bold opacity-50">Orders</span>
-          <span className="text-[2.5em] font-bold">{orders}</span>
+          <span className="text-[3em] font-bold">{orders}</span>
         </div>
         <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
           <span className="text-[1.3em] font-bold opacity-50">Delivered</span>
-          <span className="text-[2.5em] font-bold">{deliver}</span>
+          <span className="text-[3em] font-bold">{deliver}</span>
         </div>
       </div>
       <div className="w-[100%] h-[45%] mr-[2em] flex flex-row px-[2em] justify-between ">
-        <div className="w-[60%] h-[90%] flex items-end">
-          <img src={Image} alt="Image" className="h-[90%] w-[90%]" />
+        <div className="w-[60%] h-[90%] flex items-center">
+          <img src={Image} alt="Image" className="h-[80%] w-[90%]" />
         </div>
         <div className="w-[30%] h-[95%] bg-white rounded-md flex flex-col  py-[2em] shadow-xl">
           <div className="flex flex-col justify-center items-center w-[100%] ">
@@ -133,7 +133,7 @@ export default function OverViewPage() {
                       className=" font-bold text-[1.2em] opacity-50 p-2 flex gap-1 items-center"
                       key={key}
                     >
-                      <div className="h-[0.8em] w-[0.8em] bg-green-500 rounded-full"></div>
+                      <div className="h-[0.8em] w-[0.8em] bg-[#47DF00] rounded-full"></div>
                       {data}
                     </div>
                     <div className="font-bold text-[2.4em]">
@@ -165,7 +165,7 @@ export default function OverViewPage() {
               Today
             </div>
             <div className="flex flex-row justify-between items-center h-[40%]">
-              <span className="font-bold text-[1.3em] text-[#47DF00]">
+              <span className="font-bold text-[1.35em] text-[#EFA129]">
                 Create new
               </span>
               <span className="material-symbols-outlined font-bold text-[1.8em] bg-[#EFA129] rounded-sm text-black">

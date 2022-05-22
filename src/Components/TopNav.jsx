@@ -24,7 +24,7 @@ export default function TopNav({title}) {
             <span className="text-black text-[1.5em] ml-2 font-bold ">
               Giovani Coder
             </span>
-            <span className="material-symbols-outlined text-black text-[2.8em]">
+            <span className="material-symbols-outlined text-black text-[3em]">
               account_circle
             </span>
           </div>

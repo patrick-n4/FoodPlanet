@@ -1,8 +1,11 @@
 import React from "react";
 
 export default function AddClient() {
+  const handleforms=(e)=>{
+    e.preventDefault();
+  }
   return (
-    <div className="flex flex-col  w-[50%] h-[100%]">
+    <form onSubmit={handleforms} className="flex flex-col  w-[50%] h-[100%]">
       <h1 className='client text-orange-400 ml-[50rem] mt-[5rem] text-4xl'>Client</h1>
       <div className='client-content ml-[40rem] mt-[5rem]'>
         <h1 className='clients text-2xl w-[15rem]'>Client</h1>
@@ -16,7 +19,7 @@ export default function AddClient() {
 
       </div>
       <div className='client-content ml-[40rem] mt-[5rem]'>
-        <h1 className='clients text-2xl w-[15rem]'>Represntation</h1>
+        <h1 className='clients text-2xl w-[15rem]'>Represetation</h1>
         <input type='text' className='client-input text-400xl border-b-2 border-solid py-2 w-[30rem] none mt-4' placeholder='full names'/>
         
 
@@ -51,9 +54,9 @@ export default function AddClient() {
         
 
       </div>
-      <div className='btn bg-[orange] cursor-pointer hover:bg-orange-400 p-4 w-48 ml-[50rem] mt-20 text-white text-2xl rounded-[5px]'>
-        <p className=' add-client ml-8'>Add client</p>
-      </div>
-    </div>
+      <button type='submit' className='btn bg-[orange] cursor-pointer hover:bg-orange-400 p-4 w-48 ml-[50rem] text-white text-2xl rounded-[5px] my-8'>Add client</button>
+    
+      </form>
+ 
   );
 }

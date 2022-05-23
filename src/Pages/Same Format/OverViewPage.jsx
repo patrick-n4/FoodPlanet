@@ -64,26 +64,26 @@ export default function OverViewPage() {
     <div className="flex flex-col w-[85%] h-[100%]">
       <TopNav title="Overview" />
       <div className="h-[15%] flex flex-row gap-5 items-center justify-between mx-[2em]">
-        <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center ">
-          <span className="text-[1.3em] font-bold opacity-50">Clients</span>
+        <div className="bg-white w-[25%] h-[65%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center ">
+          <span className="text-[1.5em] font-bold opacity-50">Clients</span>
           <span className="text-[3em] font-bold">{clients}</span>
         </div>
-        <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
-          <span className="text-[1.2em] font-bold ">Revenue (FRW) </span>
+        <div className="bg-white w-[25%] h-[65%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
+          <span className="text-[1.5em] font-bold ">Revenue (FRW) </span>
           <span className="text-[3em] font-bold">{usFormat.format(money)}</span>
         </div>
-        <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
-          <span className="text-[1.3em] font-bold opacity-50">Orders</span>
+        <div className="bg-white w-[25%] h-[65%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
+          <span className="text-[1.5em] font-bold opacity-50">Orders</span>
           <span className="text-[3em] font-bold">{orders}</span>
         </div>
-        <div className="bg-white w-[25%] h-[90%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
-          <span className="text-[1.3em] font-bold opacity-50">Delivered</span>
+        <div className="bg-white w-[25%] h-[65%] drop-shadow-2xl rounded-md flex flex-col justify-center items-center">
+          <span className="text-[1.5em] font-bold opacity-50">Delivered</span>
           <span className="text-[3em] font-bold">{deliver}</span>
         </div>
       </div>
       <div className="w-[100%] h-[45%] mr-[2em] flex flex-row px-[2em] justify-between ">
-        <div className="w-[60%] h-[90%] flex items-center">
-          <img src={Image} alt="Image" className="h-[80%] w-[90%]" />
+        <div className="w-[60%] h-[90%] flex ">
+          <img src={Image} alt="Image" className="h-[90%] w-[100%]" />
         </div>
         <div className="w-[30%] h-[95%] bg-white rounded-md flex flex-col  py-[2em] shadow-xl">
           <div className="flex flex-col justify-center items-center w-[100%] ">

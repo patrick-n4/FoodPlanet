@@ -274,7 +274,7 @@ export default function MenuPage() {
             </div>
           </div>
         </div>
-        <div className="w-[25%] flex flex-col gap-[1em] bg-white shadow-2xl h-[25%] p-2 rounded-md sticky top-0">
+        <div className="w-[25%] flex flex-col gap-[1em] bg-white shadow-2xl h-[40%] p-2 rounded-md sticky top-0">
           <div className="font-bold text-[1.4em] flex justify-center">
             New Menu Item
           </div>

@@ -62,7 +62,6 @@ export default function AllPage() {
           element={
             <div className="bg-white w-[100%] h-[220vh] flex flex-col">
               <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
-                <LeftNavBar logo={Logo} />
                 <AddClientPage />
               </div>
               <Footer />

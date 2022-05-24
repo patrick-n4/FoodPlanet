@@ -1,19 +1,18 @@
 import React from "react";
 import TopNav from "../../Components/TopNav";
-import OrderList from "./ComposForOrders/OrderList";
 
 export default function Order() {
   return (
-    <div className="flex flex-col w-[80%] h-[100%] orders-page">
+    <div className="flex flex-col w-[80%] h-[100%] orders-page ml-[15%]">
       <TopNav title="Orders" />
-      <div id="stats">
-        <span className="statistics">Total Orders</span>
-        <span className="statistics">Delivered</span>
-        <span className="statistics">Pending</span><br />
-        <h1 className="statNumbers">1</h1>
-        <h1 className="statNumbers">2</h1>
-        <h1 className="statNumbers">3</h1>
-      </div>
+      <div id="stats-order-card">
+        
+        <div id="stats">
+          <h2>Total Orders</h2><h4>13</h4>
+          <h2>Delivered</h2><h4>13</h4>
+          <h2>Pending</h2><h4>0</h4>
+        </div>
+        
       <div id="new-order">
         <h3 className="text-[1em] order-card-title">New Order</h3>
         <div className="order-items flex flex-row items-center gap-[1em]">
@@ -42,30 +41,93 @@ export default function Order() {
           <button className="newitem">+ New</button>
         </div>
         </div>
-      
+      </div>
+    
       <div id="order-bar">
         <h2>Orders</h2>
         <button className="filter-order">Delivered</button>
         <button className="filter-order" id="pend">Pending</button>
         <button className="filter-order">All</button><br /><br />
       </div>
-      <div className="head-of-table">
-                <span id="number">No.</span>
-                <span id="item">Items</span>
-                <span id="client">Client</span>
-                <span id="client-price">Price</span>
-                <span id="client-phone">Client's phone</span>
-            </div>
-
       
-        <OrderList />
-        <OrderList />
-        <OrderList />
-        <OrderList />
-        <OrderList />
-        <OrderList /> 
+      <div id="order-table">
+        <table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Items</th>
+              <th>Client</th>
+              <th>Price</th>
+              <th>Client's phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Fruit salad, grilled lamb, apple pie</td>
+              <td>Ndayambaje Lois</td>
+              <td>Rwf 9500</td>
+              <td>0789012345</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Fruit salad, grilled lamb, apple pie</td>
+              <td>Ndayambaje Lois</td>
+              <td>Rwf 9500</td>
+              <td>0789012345</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Fruit salad, grilled lamb, apple pie</td>
+              <td>Ndayambaje Lois</td>
+              <td>Rwf 9500</td>
+              <td>0789012345</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Fruit salad, grilled lamb, apple pie</td>
+              <td>Ndayambaje Lois</td>
+              <td>Rwf 9500</td>
+              <td>0789012345</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Fruit salad, grilled lamb, apple pie</td>
+              <td>Ndayambaje Lois</td>
+              <td>Rwf 9500</td>
+              <td>0789012345</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Fruit salad, grilled lamb, apple pie</td>
+              <td>Ndayambaje Lois</td>
+              <td>Rwf 9500</td>
+              <td>0789012345</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Fruit salad, grilled lamb, apple pie</td>
+              <td>Ndayambaje Lois</td>
+              <td>Rwf 9500</td>
+              <td>0789012345</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Fruit salad, grilled lamb, apple pie</td>
+              <td>Ndayambaje Lois</td>
+              <td>Rwf 9500</td>
+              <td>0789012345</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Fruit salad, grilled lamb, apple pie</td>
+              <td>Ndayambaje Lois</td>
+              <td>Rwf 9500</td>
+              <td>0789012345</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    
-
   );
 }

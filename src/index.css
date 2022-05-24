@@ -2,166 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
-.orders-page{
-    background-color: #F6F7FB;
+.order {
+	display: block;
+	background-color: red;
 }
 
-.order{
-    display: block;
+div#stats,
+div#new-order {
+	display: block;
+	float: left;
+	margin: 1% 15% 1%;
+	padding: 2.5em;
 }
 
-#stats{
-    display: flex;
+.theOrder,
+.price {
+	display: flex;
 }
 
-.orderList, .theOrder, .price{
-    display: flex;
+div#order-bar {
+	background-color: #ff8c1a;
+	border-radius: 0.75em 0.75em 0 0;
+	margin: 0.125em auto 0.125em auto;
+	width: 80%;
 }
 
-div#order-bar{
-    background-color: #ff8c1a;
-    border-radius: 0.75em 0.75em 0 0;
-    margin-bottom: 1.25em;
-    margin: auto;
-    width: 80%;
+.filter-order {
+	display: inline;
+	float: right;
+	background-color: #fcfcfc;
+	color: black;
+	font-size: 1em;
+	margin-right: 4.375em;
+	margin-bottom: 1em;
+	padding: 0.5em;
+	width: 6.25em;
+	border-radius: 0.4375em;
 }
 
-.filter-order{ 
-    display: inline;
-    float: right;
-    background-color: #fcfcfc;
-    color: black;
-    font-size: 1em;
-    margin-right: 4.375em;
-    margin-bottom: 1em;
-    padding: 0.5em;
-    width: 6.25em;
-    border-radius: 0.4375em;
+.filter-order:focus {
+	background-color: #000;
+	color: white;
 }
 
-.filter-order:focus{
-    background-color: #000;
-    color: white;
+#order-bar h2 {
+	font-weight: 600;
+	margin-left: 1.25em;
+	margin-top: 0.625em;
+	font-size: 1.3em;
+	color: white;
+	vertical-align: middle;
 }
 
-#order-bar h2{
-    font-weight: 600;
-    margin-left: 1.25em;
-    margin-top: 0.625em;
-    font-size: 1.3em;
-    color: white;
-    vertical-align: middle;
+#new-order {
+	background-color: rgb(255, 240, 240);
+	margin: auto;
+	width: 20%;
+	border-radius: 0.3125em;
+	border: 0.03125em solid rgb(0, 0, 0);
+	padding: 0.5em 0.5em 0.375em;
 }
 
-div.orderContainer{
-    border-radius: 0.3125em;
-    background-color: #fff;
-    border: 0.20.3125em solid #000;
-    margin: 0.3125em auto 0.3125em auto;
-    width: 80%;
-    margin-bottom: 0.3125em;
-    margin: auto;
+button.newitem {
+	background-color: #ff8c1a;
+	color: #fff;
+	border-radius: 0.3125em;
+	padding: 0.375em;
+	width: 4.375em;
+	text-align: center;
+	position: relative;
+	margin-left: 0.5em;
 }
 
-div.orderList{
-    display: block;
+.order-items {
+	margin: 0.3125em;
 }
 
-#new-order{
-    background-color:rgba(255, 255, 255, 0.963);
-    float: right;
-    margin-left: 70%;
-    margin-bottom: 1.875em;
-    margin-right: 2.5em;
-    display: inline;
-    width: 20%;
-    border-radius: 0.3125em;
-    border: 0.0.3125em solid black;
-    padding-bottom: 0.375em;
-    padding: 0.5em;
+.order-card-title {
+	font-size: large;
+	font-weight: 700;
+	text-align: center;
 }
 
-button.newitem{
-    background-color: #ff8c1a;
-    color: #fff;
-    border-radius: 0.3125em;
-    padding: 0.375em;
-    width: 4.375em;
-    text-align: center;
-    position: absolute;
-    left: 82.5%;
-    margin-left: 5em;
+#stats {
+	background-color: rgb(255, 240, 240);
+	padding: 1.5em;
+	width: 18em;
+	border-radius: 0.3125em;
+	border: 0.03125em solid black;
 }
 
-.order-items{
-    margin: 0.3125em;
+.statNumbers {
+	text-align: center;
 }
 
-.order-card-title{
-    font-size: large;
-    font-weight: 700;
-    text-align: center;
+#order-table td,
+#order-table thead,
+#order-table th {
+	margin: auto;
+	background-color: #fc000009;
 }
 
-#stats{
-    background-color: #fff;
-    max-width: 50%;
-    display: flex;
-    padding: 0.3125em;
+#order-table td,
+#order-table th {
+	text-align: left;
+	padding: 4.05em;
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
-span.statistics{
-    font-size: 1.3em;
-    font-weight: 600;
-    text-align: center;
-    margin: 12.0.3125em auto auto 66.20.3125em;
-    display: block;
+#order-table th {
+	text-align: left;
+	padding: 4.05em;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
-.statNumbers{
-    text-align: center;
- }
-
- .orderList{
-    background-color: rgba(98, 4, 9, 0.03);
-    float:left;
-    width: 71em;
-    padding: 2em;
-    margin: 1em;
- }
-
- div.orderBox div{
-     display: flex;
-     padding-left: 1em;
-     margin-left: 2em;
- }
-
- div.head-of-table span{
-    display: inline;
-    margin: auto;
-    width: 80%;
-    padding: 0 2em;
-    font-weight: 500;
-    text-align: center;
+#order-table table {
+	margin-left: 9.4em;
+	border-radius: 1.375em;
 }
 
-span#number{
-     width: 3em;
-     padding: 0 3.3em;
-     margin-left: 10%
- }
+thead {
+	margin: 0 2em;
+	font-weight: 500;
+	font-size: 1em;
+	text-align: center;
+}
 
- span#item{
-    padding: 0 7em;
- }
+#stats h2 {
+	font-size: 1.5em;
+	text-align: center;
+	font-weight: 600;
+}
 
- span#client{
-     width: 100em;
-     padding: 0 4.4em;
- }
-
-
- #client-phone{
-    width: 10em;
- }
-
+#stats h4 {
+	font-size: 1.3em;
+	font-weight: 400;
+	text-align: center;
+}

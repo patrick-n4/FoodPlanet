@@ -21,7 +21,7 @@ export default function TopNav({title}) {
             </span>
           </div>
           <div className="w-[35%] flex  flex-row items-center justify-between mr-[1em]  rounded-md shadow-xl">
-            <span className="text-black text-[1.5em] ml-2 font-bold ">
+            <span className="text-black text-[1.2em] ml-2 font-bold ">
               Giovani Coder
             </span>
             <span className="material-symbols-outlined text-black text-[3em]">

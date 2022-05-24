@@ -4,6 +4,7 @@
 
 .order {
 	display: block;
+	background-color: red;
 }
 
 div#stats,

@@ -18,7 +18,7 @@ function Login() {
       })
   })
   useEffect(()=>{
-      document.title = 'Login to Food planet';
+      document.title = 'Login to FoodPlanet';
       window.innerWidth >= 867 ? setWidth(false) : setWidth(true);
   },[])
   const validate = async(data) =>{
@@ -57,7 +57,11 @@ function Login() {
                 <Link to="/forgot" className="text-right w-full hover:underline text-[blue]">Forgot password?</Link>
                 <div className="flex justify-end"><Button type="submit" variant="contained" style={{background: "#E08B1F"}}>Login</Button></div>
             </div>
+<<<<<<< HEAD
             <div className="flex text-xl gap-3 min-w-full justify-center"><span>Don't have an account yet</span><Link to="/signup" className="hover:underline text-[blue]">Signup</Link></div>
+=======
+            <div className="flex text-xl gap-1 min-w-full justify-center"><span>Don't have an account?</span><Link to="/signup" className="hover:underline text-[blue]">Signup</Link></div>
+>>>>>>> patrick-frontend
         </form>
     </div>
   )

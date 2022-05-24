@@ -82,23 +82,6 @@ export default function AllPage() {
         />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-<<<<<<< HEAD
-      <div className="bg-white w-[100%] h-[220vh] flex flex-col">
-        <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
-          <LeftNavBar logo={Logo} />
-          <Routes>
-            <Route path="/Overview" element={<OverViewPage />} />
-            <Route path="/Orders" element={<OrdersPage />} /> 
-            <Route path="/Addclient" element={<AddClientPage />} />
-            <Route path="/Client" element={<ClientPage />} />
-            <Route path="/Menu" element={<MenuPage />} />
-            <Route path="*" element={<MenuPage />} />
-          </Routes>
-        </div>
-        <Footer />
-      </div>
-=======
->>>>>>> patrick-frontend
     </Router>
   );
 }

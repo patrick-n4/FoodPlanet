@@ -82,8 +82,13 @@ export default function OverViewPage() {
         </div>
       </div>
       <div className="w-[100%] h-[45%] mr-[2em] flex flex-row px-[2em] justify-between ">
+<<<<<<< HEAD
         <div className="w-[60%] h-[90%] flex items-end">
           <img src={Image} alt="Image" className="h-[90%] w-[90%]" />
+=======
+        <div className="w-[60%] h-[90%] flex ">
+          <img src={Image} alt="Image" className="h-[90%] w-[100%]" />
+>>>>>>> patrick-frontend
         </div>
         <div className="w-[30%] h-[95%] bg-white rounded-md flex flex-col  py-[2em] shadow-xl">
           <div className="flex flex-col justify-center items-center w-[100%] ">
@@ -133,7 +138,7 @@ export default function OverViewPage() {
                       className=" font-bold text-[1.2em] opacity-50 p-2 flex gap-1 items-center"
                       key={key}
                     >
-                      <div className="h-[0.8em] w-[0.8em] bg-green-500 rounded-full"></div>
+                      <div className="h-[0.8em] w-[0.8em] bg-[#47DF00] rounded-full"></div>
                       {data}
                     </div>
                     <div className="font-bold text-[2.4em]">
@@ -165,7 +170,7 @@ export default function OverViewPage() {
               Today
             </div>
             <div className="flex flex-row justify-between items-center h-[40%]">
-              <span className="font-bold text-[1.3em] text-[#47DF00]">
+              <span className="font-bold text-[1.35em] text-[#EFA129]">
                 Create new
               </span>
               <span className="material-symbols-outlined font-bold text-[1.8em] bg-[#EFA129] rounded-sm text-black">

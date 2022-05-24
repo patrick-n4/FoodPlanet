@@ -2,7 +2,7 @@ import React from "react";
 export default function TopNav({title}) {
     return (
       <div className="w-[100] bg-inherit h-[5 %] flex flex-row justify-between p-8 items-center">
-            <h1 className="text-black font-bold text-[2em]">{title}</h1>
+            <h1 className="text-black font-bold text-[2.5em]">{title}</h1>
         <div className="w-[45%] h-[85%] bg-white flex flex-row items-center justify-between rounded-md">
           <div className="flex items-center w-[50%] ml-2 rounded-[0.2em] border">
             <input
@@ -20,11 +20,11 @@ export default function TopNav({title}) {
               notifications
             </span>
           </div>
-          <div className="w-[35%] flex  flex-row items-center justify-between mr-[1em]  rounded-md">
-            <span className="text-black text-[1em] ml-2 font-bold ">
+          <div className="w-[35%] flex  flex-row items-center justify-between mr-[1em]  rounded-md shadow-xl">
+            <span className="text-black text-[1.2em] ml-2 font-bold ">
               Giovani Coder
             </span>
-            <span className="material-symbols-outlined text-black text-[2.8em]">
+            <span className="material-symbols-outlined text-black text-[3em]">
               account_circle
             </span>
           </div>

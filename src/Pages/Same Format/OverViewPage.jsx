@@ -82,13 +82,8 @@ export default function OverViewPage() {
         </div>
       </div>
       <div className="w-[100%] h-[45%] mr-[2em] flex flex-row px-[2em] justify-between ">
-<<<<<<< HEAD
-        <div className="w-[60%] h-[90%] flex items-end">
-          <img src={Image} alt="Image" className="h-[90%] w-[90%]" />
-=======
         <div className="w-[60%] h-[90%] flex ">
           <img src={Image} alt="Image" className="h-[90%] w-[100%]" />
->>>>>>> patrick-frontend
         </div>
         <div className="w-[30%] h-[95%] bg-white rounded-md flex flex-col  py-[2em] shadow-xl">
           <div className="flex flex-col justify-center items-center w-[100%] ">

@@ -12,76 +12,83 @@ import HomePage from "./DifferentFormat/Home";
 import LoginPage from "./DifferentFormat/Login";
 import SignupPage from "./DifferentFormat/Signup";
 import PageNotFound from "./DifferentFormat/PageNotFound";
+import Resto from "./Same Format/Resto";
 
-export default function AllPage() {
+export default function Home() {
+  return <HomePage />;
+}
+export function SignUp() {
+  return <SignupPage />;
+}
+export function Login() {
+  return <LoginPage />;
+}
+export function Overview() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route
-          path="pages/overview"
-          element={
-            <div className="bg-white w-[100%] h-[220vh] flex flex-col">
-              <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
-                <LeftNavBar logo={Logo} />
-                <OverViewPage />
-              </div>
-              <Footer />
-            </div>
-          }
-        />
-        <Route
-          path="pages/orders"
-          element={
-            <div className="bg-white w-[100%] h-[220vh] flex flex-col">
-              <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
-                <LeftNavBar logo={Logo} />
-                <OrdersPage />
-              </div>
-              <Footer />
-            </div>
-          }
-        />
-        <Route
-          path="pages/add-client"
-          element={
-            <div className="bg-white w-[100%] h-[220vh] flex flex-col">
-              <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
-                <LeftNavBar logo={Logo} />
-                <AddClientPage />
-              </div>
-              <Footer />
-            </div>
-          }
-        />
-        <Route
-          path="pages/clients"
-          element={
-            <div className="bg-white w-[100%] h-[220vh] flex flex-col">
-              <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
-                <LeftNavBar logo={Logo} />
-                <ClientPage />
-              </div>
-              <Footer />
-            </div>
-          }
-        />
-        <Route
-          path="pages/menu"
-          element={
-            <div className="bg-white w-[100%] h-[220vh] flex flex-col">
-              <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
-                <LeftNavBar logo={Logo} />
-                <MenuPage />
-              </div>
-              <Footer />
-            </div>
-          }
-        />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </Router>
+    <div className="bg-white w-[100%] h-[220vh] flex flex-col">
+      <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
+        <LeftNavBar logo={Logo} />
+        <OverViewPage />
+      </div>
+      <Footer />
+    </div>
   );
+}
+export function Restos() {
+  return (
+    <div className="bg-white w-[100%] h-[220vh] flex flex-col">
+      <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
+        <LeftNavBar logo={Logo} />
+        <Resto />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+export function Orders() {
+  return (
+    <div className="bg-white w-[100%] h-[220vh] flex flex-col">
+      <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
+        <LeftNavBar logo={Logo} />
+        <OrdersPage />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+export function AddClient() {
+  return (
+    <div className="bg-white w-[100%] h-[220vh] flex flex-col">
+      <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
+        <AddClientPage />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+export function Clients() {
+  return (
+    <div className="bg-white w-[100%] h-[220vh] flex flex-col">
+      <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
+        <LeftNavBar logo={Logo} />
+        <ClientPage />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+
+export function Menu() {
+  return (
+    <div className="bg-white w-[100%] h-[220vh] flex flex-col">
+      <div className="flex flex-row bg-inherit h-[100%] w-[100%] gap-1 ">
+        <LeftNavBar logo={Logo} />
+        <MenuPage />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+export function NotFound() {
+  return <PageNotFound />;
 }

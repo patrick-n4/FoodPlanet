@@ -1,19 +1,12 @@
 import React from "react";
-<<<<<<< HEAD
-=======
 
 import Leftside from '../../Components/Left-side';
 
->>>>>>> patrick-frontend
 import TopNav from "../../Components/TopNav";
 export default function ClientPage() {
   return (
     <div className="flex flex-col w-[80%] h-[100%]">
       <TopNav title="ClientPage" />
-<<<<<<< HEAD
-
-    </div>
-=======
        <div className='m-content bg-white w-[85rem] ml-4 mt-10 h-[100%] overscroll-contain'>
           <div className='top-content ml-96 mt-10'>
           <h1 className='new-client font-bold mt-8 text-4xl ml-8'>New client</h1>
@@ -63,6 +56,5 @@ export default function ClientPage() {
         </div>
         </div>
         </div> 
->>>>>>> patrick-frontend
   );
 }

@@ -17,58 +17,60 @@ export default function Order() {
 
         <div id="new-order">
           <h3 className="text-[1em] order-card-title">New Order</h3>
-          <div className="order-items flex flex-row items-center gap-[1em]">
-            <input
-              type="checkbox"
-              name="Appetizer"
-              id="appetizer"
-              className="order w-[1.5em] h-[2em] "
-            />
-            <span className="order-items text-[1em] font-medium">
-              Appetizer
-            </span>
-            <button className="newitem">+ New</button>
-          </div>
-          <div className="order-items flex flex-row items-center gap-[1em]">
-            <input
+          <table>
+            <tr>
+                <td><input
+                  type="checkbox"
+                  name="Appetizer"
+                  id="appetizer"
+                  className="order w-[1.5em] h-[2em] "
+                  /></td>
+                  <td>Appetizer</td>
+                <td><button className="newitem">+ New</button></td>
+            </tr>
+            <tr>
+                <td><input
               type="checkbox"
               name="Starter"
               id="starter"
               className="order w-[1.5em] h-[2em] "
-            />
-            <span className="order-items text-[1em] font-medium">Starter</span>
-            <button className="newitem">+ New</button>
-          </div>
-          <div className="order-items flex flex-row items-center gap-[1em]">
-            <input
+              /></td>
+              <td>Starter</td>
+              <td><button className="newitem">+ New</button></td>
+            </tr>
+            <tr>
+              <td><input
               type="checkbox"
               name="Main"
               id="main-meal"
               className="order w-[1.5em] h-[2em] "
-            />
-            <span className="order-items text-[1em] font-medium">Main</span>
-            <button className="newitem">+ New</button>
-          </div>
-          <div className="order-items flex flex-row items-center gap-[1em]">
-            <input
+            /></td>
+              <td>Main</td>
+              <td>
+                <td><button className="newitem">+ New</button></td></td>
+            </tr>
+            <tr>
+              <td><input
               type="checkbox"
-              name="Dessert"
-              id="dessert"
+              name="Main"
+              id="main-meal"
               className="order w-[1.5em] h-[2em] "
-            />
-            <span className="order-items text-[1em] font-medium">Dessert</span>
-            <button className="newitem">+ New</button>
-          </div>
-          <div className="order-items flex flex-row items-center gap-[1em]">
-            <input
+            /></td>
+            <td>Dessert</td>
+              <td>
+              <td><button className="newitem">+ New</button></td></td>
+          </tr>
+            <tr>
+              <td><input
               type="checkbox"
-              name="Drink"
-              id="drink"
+              name="Main"
+              id="main-meal"
               className="order w-[1.5em] h-[2em] "
-            />
-            <span className="order-items text-[1em] font-medium">Drink</span>
-            <button className="newitem">+ New</button>
-          </div>
+            /></td>
+            <td>Drink</td>
+              <td><button className="newitem">+ New</button></td>
+          </tr>
+        </table>
         </div>
       </div>
 

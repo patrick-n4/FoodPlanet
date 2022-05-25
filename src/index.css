@@ -141,3 +141,8 @@ thead {
 	font-weight: 400;
 	text-align: center;
 }
+
+div#new-order table td{
+	padding-bottom:0.125em;
+	padding-top:0.125em;
+}

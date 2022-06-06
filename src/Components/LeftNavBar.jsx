@@ -9,30 +9,38 @@ export default function TopNav({ logo }) {
         className="w-[10em] h-[10em] mx-auto my-3"
       />
       <div className="bg-black h-[100%] flex flex-col ">
-        <Link to="/pages/overview" className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]">
+        <div className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]">
           <span className="material-symbols-outlined text-[1.5em] text-white pr-[1em]">
             grid_view
           </span>
-          <div className="text-[1em] text-white">Overview</div>
-        </Link>
-        <Link to="/pages/clients"  className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]">
+          <Link className="text-[1em] text-white" to="/pages/overview">
+            Overview
+          </Link>
+        </div>
+        <div className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]">
           <span className="material-symbols-outlined text-[1.5em] text-white pr-[1em]">
             group
           </span>
-          <div className="text-[1em] text-white">Clients</div>
-        </Link>
-        <Link to="/pages/resto" className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]">
+          <Link className="text-[1em] text-white" to="/pages/clients">
+            Clients
+          </Link>
+        </div>
+        <div className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]">
           <span className="material-symbols-outlined text-[1.5em] text-white pr-[1em]">
-            manage_accounts
+            restaurant
           </span>
-          <div className="text-[1em] text-white">Add client</div>
-        </Link>
-        <Link to="/pages/orders" className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]">
+          <Link className="text-[1em] text-white" to="/pages/resto">
+            Restaurent
+          </Link>
+        </div>
+        <div className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]">
           <span className="material-symbols-outlined text-[1.5em] text-white pr-[1em]">
-            settings
+            menu_book
           </span>
-          <div className="text-[1em] text-white">Orders</div>
-        </Link>
+          <Link className="text-[1em] text-white" to="/pages/menu">
+            Menu
+          </Link>
+        </div>
         <Link to="/pages/add-client" className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]">
           <span className="material-symbols-outlined text-[1.5em] text-white pr-[1em]">
             account_circle

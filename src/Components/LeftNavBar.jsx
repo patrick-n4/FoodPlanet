@@ -38,6 +38,15 @@ export default function TopNav({ logo }) {
         </Link>
         <Link
           className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]"
+          to="/pages/resto"
+        >
+          <span className="material-symbols-outlined text-[1.5em] text-white pr-[1em]">
+            list_alt
+          </span>
+          <div className="text-[1em] text-white">Orders</div>
+        </Link>
+        <Link
+          className="w-[100%] h-[5em] bg-[#000] flex flex-row  items-center pl-[2.5em]  hover:cursor-pointer hover:border-l-[0.4em] hover:bg-[#211C1C]"
           to="/pages/menu"
         >
           <span className="material-symbols-outlined text-[1.5em] text-white pr-[1em]">

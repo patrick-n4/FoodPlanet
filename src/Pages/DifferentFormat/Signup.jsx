@@ -3,7 +3,7 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 import Logo from "../../IMAGES/logo.png";
 import Background from "../../IMAGES/background.png";
 import { Link } from "react-router-dom";
-import { Alert, Button } from "@mui/material";
+import { Alert, Button, inputClasses } from "@mui/material";
 function Signup() {
   const [password, setPassword] = useState(false);
   const [confirm, setConfirm] = useState(false);

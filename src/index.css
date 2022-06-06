@@ -2,13 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: poppins;
-  src: url("./Fonts/Poppins-Regular.ttf");
-}
-
 * {
-  font-family: poppins;
+  font-family: "Poppins", sans-serif;
 }
 
 .order {

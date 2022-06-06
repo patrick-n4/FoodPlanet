@@ -9,7 +9,7 @@ import Home, {
   Overview,
   Restos,
   SignUp,
-  NotFound,
+  NotFound
 } from "./Pages/AllPage";
 export default function App() {
   return (

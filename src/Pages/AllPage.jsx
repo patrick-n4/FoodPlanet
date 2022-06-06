@@ -92,4 +92,3 @@ export function Menu() {
 export function NotFound() {
   return <PageNotFound />;
 }
-

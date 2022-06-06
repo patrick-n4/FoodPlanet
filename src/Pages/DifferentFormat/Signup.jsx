@@ -14,7 +14,7 @@ function Signup() {
     Firstname: "",
     Lastname: "",
     Phone: "",
-    Confirm: "",
+    Confirm: ""
   });
   const [width, setWidth] = useState(false);
   useEffect(() => {
@@ -64,7 +64,7 @@ function Signup() {
     "Email",
     "Phone",
     "Password",
-    "Confirm",
+    "Confirm"
   ];
   return (
     <div className="w-full h-[100%] flex justify-center flex-row">

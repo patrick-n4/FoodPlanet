@@ -52,7 +52,7 @@ export default function TopNav({ logo }) {
           <span className="material-symbols-outlined text-[1.5em] text-white pr-[1em]">
             account_circle
           </span>
-          <div className="text-[1em] text-white">add your client</div>
+          <div className="text-[1em] text-white">Add Client</div>
         </Link>
         <div className="h-[8%] w-[100%] flex flex-row justify-evenly items-center bg-white border absolute bottom-0">
           <a href="https://www.facebook.com/" target="_blank">

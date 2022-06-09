@@ -42,12 +42,7 @@ function Signup() {
   const getValues = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  const post = async (e) => {
-    e.preventDefault();
-    validate(values)
-      .then((data) => setErr(data))
-      .catch((err) => console.log(err));
-  };
+
   const watchP = (index) => {
     index === 1 ? setPassword(!password) : setConfirm(!confirm);
   };
@@ -67,6 +62,22 @@ function Signup() {
     "Password",
     "Confirm"
   ];
+  async function handleSubmit(event) {
+    event.preventDefault();
+    try {
+      const user = await axios.post("/api/auth/client/signup");
+      console.log(user.data);
+      console.log(user.status);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  // const post = async (e) => {
+  //   e.preventDefault();
+  //   validate(values)
+  //     .then((data) => setErr(data))
+  //     .catch((err) => console.log(err));
+  // };
   return (
     <div className="w-full h-[100%] flex justify-center flex-row">
       <div
@@ -80,7 +91,7 @@ function Signup() {
         </h1>
       </div>
       <form
-        onSubmit={post}
+        onSubmit={handleSubmit}
         className=" w-1/2 gap-10 overflow-hidden flex flex-col items-center justify-center"
       >
         <img alt="logo" className="w-[25rem]" src={Logo} />
@@ -101,7 +112,6 @@ function Signup() {
                 !width ? "ml-32 min-w-[calc(100%-200px)]" : "min-w-full"
               } gap-5`}
             >
-              {console.log(width)}
               {index === 0
                 ? inputs
                     .slice(0, 3)

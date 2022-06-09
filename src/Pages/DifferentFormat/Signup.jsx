@@ -4,6 +4,7 @@ import Logo from "../../IMAGES/logo.png";
 import Background from "../../IMAGES/background.png";
 import { Link } from "react-router-dom";
 import { Alert, Button, inputClasses } from "@mui/material";
+import axios from "./../../axios/axios";
 function Signup() {
   const [password, setPassword] = useState(false);
   const [confirm, setConfirm] = useState(false);

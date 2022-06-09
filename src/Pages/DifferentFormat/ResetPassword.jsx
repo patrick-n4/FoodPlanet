@@ -4,7 +4,7 @@ import Logo from "../../IMAGES/logo.png";
 import Background from "../../IMAGES/background.png";
 import { Link } from "react-router-dom";
 import { Alert, Button } from "@mui/material";
-function Login() {
+function ResetPassword() {
   const [password, setPassword] = useState(false);
   const [err, setErr] = useState(null);
   const [values, setValues] = useState({
@@ -18,7 +18,7 @@ function Login() {
     });
   });
   useEffect(() => {
-    document.title = "Login to FoodPlanet";
+    document.title = "Reset Your Password on FoodPlanet";
     window.innerWidth >= 867 ? setWidth(false) : setWidth(true);
   }, []);
   const validate = async (data) => {
@@ -58,9 +58,7 @@ function Login() {
         className=" w-1/2 gap-10 flex flex-col items-center justify-center"
       >
         <img alt="logo" className="w-[18rem]" src={Logo} />
-        <h1 className="text-3xl font-bold text-center">
-          Login to your account{" "}
-        </h1>
+        <h1 className="text-3xl font-bold text-center">Reset Your Password</h1>
         {err && <Alert severity="error">{err}</Alert>}
         <div
           className={`flex flex-col ${
@@ -72,36 +70,15 @@ function Login() {
             onChange={getValues}
             type="text"
             name="email"
-            placeholder="Email or phone number"
+            placeholder="Enter you email"
           />
-          <div className="relative">
-            <input
-              className="w-full py-2 rounded-[5px] pl-3 border-2 border-solid outline-none"
-              onChange={getValues}
-              type={!password ? "password" : "text"}
-              name="password"
-              placeholder="Password"
-            />
-            <div
-              className="absolute right-3 cursor-pointer top-[20%]"
-              onClick={watchP}
-            >
-              {password ? <VisibilityOff /> : <Visibility />}
-            </div>
-          </div>
-          <Link
-            to="/reset"
-            className="text-right w-full hover:underline text-[blue]"
-          >
-            Forgot password?
-          </Link>
           <div className="flex justify-end">
             <Button
               type="submit"
               variant="contained"
               style={{ background: "#E08B1F" }}
             >
-              Login
+              Reset
             </Button>
           </div>
         </div>
@@ -116,4 +93,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default ResetPassword;

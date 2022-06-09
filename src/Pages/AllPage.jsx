@@ -14,6 +14,7 @@ import SignupPage from "./DifferentFormat/Signup";
 import PageNotFound from "./DifferentFormat/PageNotFound";
 import Resto from "./Same Format/Resto";
 import ResetPasswordPage from "./DifferentFormat/ResetPassword";
+import CodePage from "./DifferentFormat/Code";
 
 export default function Home() {
   return <HomePage />;
@@ -26,6 +27,9 @@ export function Login() {
 }
 export function ResetPassword() {
   return <ResetPasswordPage />;
+}
+export function Code() {
+  return <CodePage />;
 }
 export function Overview() {
   return (

@@ -10,7 +10,8 @@ import Home, {
   Restos,
   SignUp,
   NotFound,
-  ResetPassword
+  ResetPassword,
+  Code
 } from "./Pages/AllPage";
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="pages/add-client" element={<AddClient />} />
         <Route path="pages/clients" element={<Clients />} />
         <Route path="reset" element={<ResetPassword />} />
+        <Route path="code" element={<Code />} />
         <Route path="pages/menu" element={<Menu />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

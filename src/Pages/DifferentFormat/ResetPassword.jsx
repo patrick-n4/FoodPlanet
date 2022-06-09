@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import Logo from "../../IMAGES/logo.png";
 import Background from "../../IMAGES/background.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Alert, Button } from "@mui/material";
 function ResetPassword() {
+  const navigate = useNavigate();
   const [password, setPassword] = useState(false);
   const [err, setErr] = useState(null);
   const [values, setValues] = useState({
@@ -77,6 +78,10 @@ function ResetPassword() {
               type="submit"
               variant="contained"
               style={{ background: "#E08B1F" }}
+              className={`w-[100%]`}
+              onClick={() => {
+                navigate("/code");
+              }}
             >
               Reset
             </Button>

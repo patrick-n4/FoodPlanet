@@ -8,8 +8,7 @@ function Code() {
   const [password, setPassword] = useState(false);
   const [err, setErr] = useState(null);
   const [values, setValues] = useState({
-    email: "",
-    password: ""
+    code: ""
   });
   const [width, setWidth] = useState(false);
   useEffect(() => {
@@ -22,12 +21,9 @@ function Code() {
     window.innerWidth >= 867 ? setWidth(false) : setWidth(true);
   }, []);
   const validate = async (data) => {
-    const { email, password } = data;
-    if (email === "" || password === "") {
-      return "Enter your password or email";
-    }
-    if (!email.includes("@gmail.com" || email.startsWith("@"))) {
-      return "Enter valid email address";
+    const { code } = data;
+    if (code === "") {
+      return "Enter the code sent to yout email";
     }
   };
   const getValues = (e) => {
@@ -36,9 +32,6 @@ function Code() {
   const post = async (e) => {
     e.preventDefault();
     setErr(await validate(values));
-  };
-  const watchP = () => {
-    setPassword(!password);
   };
 
   return (

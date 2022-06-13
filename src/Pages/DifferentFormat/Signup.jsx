@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { TurnedIn, Visibility, VisibilityOff } from "@mui/icons-material";
+import {  Visibility, VisibilityOff } from "@mui/icons-material";
 import Logo from "../../IMAGES/logo.png";
 import Background from "../../IMAGES/background.png";
-import { Link , useNavigate} from "react-router-dom";
-import { Alert, Button, inputClasses } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
+import { Alert, Button } from "@mui/material";
 import axios from "axios";
 function Signup() {
   const link = axios.create({
-    baseURL: "https://backend.supamenu.rw/supapp/"
+    baseURL: "https://backend.supamenu.rw/supapp/",
   });
-  const navigate =useNavigate()
+  const navigate = useNavigate();
   const [password, setPassword] = useState(false);
   const [confirm, setConfirm] = useState(false);
   const [err, setErr] = useState(null);
@@ -19,7 +19,7 @@ function Signup() {
     Firstname: "",
     Lastname: "",
     Phone: "",
-    Confirm: ""
+    Confirm: "",
   });
   const [width, setWidth] = useState(false);
   useEffect(() => {
@@ -64,7 +64,7 @@ function Signup() {
     "Email",
     "Phone",
     "Password",
-    "Confirm"
+    "Confirm",
   ];
 
   async function handleSubmit(event) {
@@ -74,17 +74,17 @@ function Signup() {
       firstName: values.Firstname,
       lastName: values.Lastname,
       mobile: values.Phone,
-      password: values.Password
+      password: values.Password,
     };
     try {
       const req = await link.post("/api/auth/admin/signup/", newUser, {
         headers: {
           accept: "*/*",
-          "Content-Type": "Application/json"
-        }
+          "Content-Type": "Application/json",
+        },
       });
       const res = req.data;
-      navigate('/pages/menu')
+      navigate("/pages/menu");
     } catch (er) {
       for (let i in er.response.data.apierror.details) {
         setErr(er.response.data.apierror.details[i]);

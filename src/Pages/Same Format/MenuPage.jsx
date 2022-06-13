@@ -3,7 +3,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import TopNav from "../../Components/TopNav";
 import Juice from "./../../IMAGES/Juice.jpg";
+import { useNavigate } from "react-router-dom";
 export default function MenuPage() {
+  const navigate = useNavigate()
   const menuItems = ["Appetizer", "Starter", "Main", "Dessert", "Drink"];
   const menuLists = [
     {
@@ -212,17 +214,21 @@ export default function MenuPage() {
       },
     },
   ];
-  const token = JSON.parse(localStorage.getItem("token"));
+  const [user,setUser] = useState(null)
   useEffect(() => {
+    const token = JSON.parse(localStorage.getItem("token"));
     async function fetchData() {
-      console.log(token);
-      const dadatata = await axios.post("/api/auth/refreshToken");
+      if(token) setUser(token)
+      const data = await axios.post("/api/auth/refreshToken");
     }
     fetchData();
   }, []);
+  useEffect(()=>{
+    if(!user) navigate("/login")
+  },[])
   return (
     <div className="flex flex-col w-[85%] h-[87.6%]">
-      <TopNav title="MenuPage" user={token.firstName} />
+      <TopNav title="MenuPage" user={user?.firstName} />
       <div className="flex flex-row h-full ml-[2em] gap-2">
         <div className="w-[75%] h-full">
           <div className="flex flex-col gap-3 sticky top-0 bg-white">

@@ -6,11 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { Alert, Button } from "@mui/material";
 function ResetPassword() {
   const navigate = useNavigate();
-  const [password, setPassword] = useState(false);
   const [err, setErr] = useState(null);
   const [values, setValues] = useState({
-    email: "",
-    password: ""
+    email: ""
   });
   const [width, setWidth] = useState(false);
   useEffect(() => {
@@ -24,8 +22,8 @@ function ResetPassword() {
   }, []);
   const validate = async (data) => {
     const { email, password } = data;
-    if (email === "" || password === "") {
-      return "Enter your password or email";
+    if (email === "") {
+      return "Enter your email";
     }
     if (!email.includes("@gmail.com" || email.startsWith("@"))) {
       return "Enter valid email address";
@@ -37,9 +35,6 @@ function ResetPassword() {
   const post = async (e) => {
     e.preventDefault();
     setErr(await validate(values));
-  };
-  const watchP = () => {
-    setPassword(!password);
   };
 
   return (

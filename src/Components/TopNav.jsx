@@ -1,5 +1,6 @@
+import { Circle } from "@mui/icons-material";
 import React from "react";
-export default function TopNav({ title }) {
+export default function TopNav({ title, user }) {
   return (
     <div className="w-[100] bg-inherit h-[5 %] flex flex-row justify-between p-8 items-center">
       <h1 className="text-black font-bold text-[2.5em]">{title}</h1>
@@ -20,9 +21,10 @@ export default function TopNav({ title }) {
           </span>
         </div>
         <div className="w-[35%] flex  flex-row items-center justify-between mr-[1em]  rounded-md shadow-xl">
-          <span className="text-black text-[1.2em] ml-2 font-bold ">
-            Giovani Coder
-          </span>
+          <div className="text-black flex items-center text-[1.2em] ml-2 font-bold ">
+            <span>{user}</span>
+            <Circle sx={}/>
+          </div>
           <span className="material-symbols-outlined text-black text-[3em]">
             account_circle
           </span>

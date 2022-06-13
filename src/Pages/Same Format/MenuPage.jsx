@@ -212,17 +212,17 @@ export default function MenuPage() {
       },
     },
   ];
+  const token = JSON.parse(localStorage.getItem("token"));
   useEffect(() => {
     async function fetchData() {
-      let token = JSON.parse(localStorage.getItem("token"));
-      console.log(token)
+      console.log(token);
       const dadatata = await axios.post("/api/auth/refreshToken");
     }
     fetchData();
   }, []);
   return (
     <div className="flex flex-col w-[85%] h-[87.6%]">
-      <TopNav title="MenuPage" />
+      <TopNav title="MenuPage" user={token.firstName} />
       <div className="flex flex-row h-full ml-[2em] gap-2">
         <div className="w-[75%] h-full">
           <div className="flex flex-col gap-3 sticky top-0 bg-white">

@@ -66,7 +66,7 @@ function ResetPassword() {
             onChange={getValues}
             type="text"
             name="email"
-            placeholder="Enter you email"
+            placeholder="Enter your email"
           />
           <div className="flex justify-end">
             <Button

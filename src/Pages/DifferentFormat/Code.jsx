@@ -18,7 +18,7 @@ function Code() {
     });
   });
   useEffect(() => {
-    document.title = "Login to FoodPlanet";
+    document.title = "Enter verification code";
     window.innerWidth >= 867 ? setWidth(false) : setWidth(true);
   }, []);
   const validate = async (data) => {

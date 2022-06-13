@@ -4,11 +4,8 @@ import Logo from "../../IMAGES/logo.png";
 import Background from "../../IMAGES/background.png";
 import { Link, useNavigate } from "react-router-dom";
 import { Alert, Button } from "@mui/material";
-import axios from "axios";
+import axios from "../../axios";
 function Signup() {
-  const link = axios.create({
-    baseURL: "https://backend.supamenu.rw/supapp/",
-  });
   const navigate = useNavigate();
   const [password, setPassword] = useState(false);
   const [confirm, setConfirm] = useState(false);
@@ -36,10 +33,10 @@ function Signup() {
     if (Email === "" || Firstname === "" || Lastname === "") {
       return "Enter your fristname, lastname, email";
     }
-    if (!Email.includes("@gmail.com") || Email.startsWith("@")) {
+    if (!/[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm.test(Email)) {
       return "Enter valid email address";
     }
-    if (Password === "" || Phone === "") return "Enter your password, phone";
+    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&_])[A-Za-z\d$@$!%*?&_]{8,}$/.test(password) || !/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/.test(Phone)) return "Enter your password, phone";
     if (Password !== Confirm) return "Confirm your password";
     return null;
   };
@@ -77,19 +74,12 @@ function Signup() {
       password: values.Password,
     };
     try {
-      const req = await link.post("/api/auth/admin/signup/", newUser, {
-        headers: {
-          accept: "*/*",
-          "Content-Type": "Application/json",
-        },
-      });
-      const res = req.data;
+      await axios.post("/api/auth/admin/signup/", newUser);
       navigate("/pages/menu");
     } catch (er) {
       for (let i in er.response.data.apierror.details) {
         setErr(er.response.data.apierror.details[i]);
       }
-      console.log(er);
     }
   }
   return (

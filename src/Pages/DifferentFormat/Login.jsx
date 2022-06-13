@@ -4,12 +4,13 @@ import Logo from "../../IMAGES/logo.png";
 import Background from "../../IMAGES/background.png";
 import { Link } from "react-router-dom";
 import { Alert, Button } from "@mui/material";
+import axios from "../../axios";
 function Login() {
   const [password, setPassword] = useState(false);
   const [err, setErr] = useState(null);
   const [values, setValues] = useState({
-    email: "",
-    password: ""
+    login: "",
+    password: "",
   });
   const [width, setWidth] = useState(false);
   useEffect(() => {
@@ -22,11 +23,11 @@ function Login() {
     window.innerWidth >= 867 ? setWidth(false) : setWidth(true);
   }, []);
   const validate = async (data) => {
-    const { email, password } = data;
-    if (email === "" || password === "") {
+    const { login, password } = data;
+    if (login === "" || password === "") {
       return "Enter your password or email";
     }
-    if (!email.includes("@gmail.com" || email.startsWith("@"))) {
+    if (!login.includes("@gmail.com" || login.startsWith("@"))) {
       return "Enter valid email address";
     }
   };
@@ -36,6 +37,16 @@ function Login() {
   const post = async (e) => {
     e.preventDefault();
     setErr(await validate(values));
+    try {
+      const data = await axios.post("/api/auth/signin", values);
+      if(data.data) localStorage.setItem("token", JSON.stringify(data.data))
+      navigate("/pages/menu")
+    } catch (err) {
+      console.log(err.response.data.apierror)
+      for (let i in err.response.data.apierror.details) {
+        if (!err) setErr(err.response.data.apierror.details[i]);
+      }
+    }
   };
   const watchP = () => {
     setPassword(!password);
@@ -71,7 +82,7 @@ function Login() {
             className="w-full py-2 rounded-[5px] pl-3 border-2 border-solid outline-none"
             onChange={getValues}
             type="text"
-            name="email"
+            name="login"
             placeholder="Email or phone number"
           />
           <div className="relative">

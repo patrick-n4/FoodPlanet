@@ -23,7 +23,7 @@ export default function TopNav({ title, user }) {
         <div className="w-[35%] flex  flex-row items-center justify-between mr-[1em]  rounded-md shadow-xl">
           <div className="text-black flex items-center text-[1.2em] ml-2 font-bold ">
             <span>{user}</span>
-            <Circle sx={}/>
+            <Circle sx={{}}/>
           </div>
           <span className="material-symbols-outlined text-black text-[3em]">
             account_circle

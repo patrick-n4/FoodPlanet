@@ -1,3 +1,4 @@
+import axios from "../../axios";
 import React from "react";
 import { useState, useEffect } from "react";
 import TopNav from "../../Components/TopNav";
@@ -9,148 +10,148 @@ export default function MenuPage() {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Drink"
+      type: "Drink",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Drink"
+      type: "Drink",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Appetizer"
+      type: "Appetizer",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Drink"
+      type: "Drink",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Drink"
+      type: "Drink",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Drink"
+      type: "Drink",
     },
 
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Drink"
+      type: "Drink",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Starter"
+      type: "Starter",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Starter"
+      type: "Starter",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Starter"
+      type: "Starter",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Appetizer"
+      type: "Appetizer",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Appetizer"
+      type: "Appetizer",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Appetizer"
+      type: "Appetizer",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
+      type: "Dessert",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
+      type: "Dessert",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
+      type: "Dessert",
     },
     ,
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
+      type: "Dessert",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
+      type: "Dessert",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
+      type: "Dessert",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
+      type: "Dessert",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
+      type: "Dessert",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
+      type: "Dessert",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
+      type: "Dessert",
     },
     {
       img: Juice,
       description: "Tom Yummy's Gin, Grenadine, Citrus & Ginger",
       amount: 4000,
-      type: "Dessert"
-    }
+      type: "Dessert",
+    },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [bgButton, setBgBtn] = useState(true);
@@ -163,7 +164,7 @@ export default function MenuPage() {
         setCopyMenuList((data) => all);
         setCurrentIndex((index) => 0);
         setBgBtn((bg) => bg);
-      }
+      },
     },
     {
       btn: "Drink",
@@ -172,7 +173,7 @@ export default function MenuPage() {
         setCopyMenuList((data) => result);
         setCurrentIndex((index) => 1);
         setBgBtn((bg) => bg);
-      }
+      },
     },
     {
       btn: "Starter",
@@ -181,7 +182,7 @@ export default function MenuPage() {
         setCopyMenuList((data) => result);
         setBgBtn((bg) => bg);
         setCurrentIndex((index) => 2);
-      }
+      },
     },
     {
       btn: "Appetizer",
@@ -190,7 +191,7 @@ export default function MenuPage() {
         setCopyMenuList((data) => result);
         setCurrentIndex((index) => 3);
         setBgBtn((bg) => bg);
-      }
+      },
     },
     {
       btn: "Dessert",
@@ -199,7 +200,7 @@ export default function MenuPage() {
         setCopyMenuList((data) => result);
         setCurrentIndex((index) => 4);
         setBgBtn((bg) => bg);
-      }
+      },
     },
     {
       btn: "Main",
@@ -208,11 +209,17 @@ export default function MenuPage() {
         setCopyMenuList((data) => result);
         setCurrentIndex((index) => 5);
         setBgBtn((bg) => bg);
-      }
-    }
+      },
+    },
   ];
-  useEffect(() => {}, [copyMenuList]);
-  useEffect(() => {}, [currentIndex]);
+  useEffect(() => {
+    async function fetchData() {
+      let token = JSON.parse(localStorage.getItem("token"));
+      console.log(token)
+      const dadatata = await axios.post("/api/auth/refreshToken");
+    }
+    fetchData();
+  }, []);
   return (
     <div className="flex flex-col w-[85%] h-[87.6%]">
       <TopNav title="MenuPage" />

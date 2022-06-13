@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import Logo from "../../IMAGES/logo.png";
 import Background from "../../IMAGES/background.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Alert, Button } from "@mui/material";
 import axios from "../../axios";
 function Login() {
+  const navigate = useNavigate()
   const [password, setPassword] = useState(false);
   const [err, setErr] = useState(null);
   const [values, setValues] = useState({
@@ -42,9 +43,8 @@ function Login() {
       if(data.data) localStorage.setItem("token", JSON.stringify(data.data))
       navigate("/pages/menu")
     } catch (err) {
-      console.log(err.response.data.apierror)
-      for (let i in err.response.data.apierror.details) {
-        if (!err) setErr(err.response.data.apierror.details[i]);
+      for (let i in err?.response.data.apierror.details) {
+        if (!err) setErr(err?.response.data.apierror.details[i]);
       }
     }
   };

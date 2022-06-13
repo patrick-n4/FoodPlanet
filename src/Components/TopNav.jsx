@@ -1,6 +1,11 @@
 import { Circle } from "@mui/icons-material";
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 export default function TopNav({ title, user }) {
+  const navigate = useNavigate()
+  useEffect(()=>{
+    if(!user) navigate("/login")
+  },[])
   return (
     <div className="w-[100] bg-inherit h-[5 %] flex flex-row justify-between p-8 items-center">
       <h1 className="text-black font-bold text-[2.5em]">{title}</h1>
@@ -21,9 +26,9 @@ export default function TopNav({ title, user }) {
           </span>
         </div>
         <div className="w-[35%] flex  flex-row items-center justify-between mr-[1em]  rounded-md shadow-xl">
-          <div className="text-black px-2 h-[10rem] flex items-center text-[1.2em] justify-center  font-bold ">
-            <span className="truncate">{user}</span>
-            <Circle sx={{width: 15, height: 15}}/>
+          <div className="text-black px-5 h-[4rem] gap-2 flex items-center text-[1.2em] justify-center  font-bold ">
+            <span className="truncate">{user?.firstName}</span>
+            <Circle style={user?.status === "ACTIVE" ? {color: "green"} : {color: "gray"}} sx={{width: 15, height: 15}}/>
           </div>
           
         </div>

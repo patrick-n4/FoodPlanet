@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { TurnedIn, Visibility, VisibilityOff } from "@mui/icons-material";
 import Logo from "../../IMAGES/logo.png";
 import Background from "../../IMAGES/background.png";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import { Alert, Button, inputClasses } from "@mui/material";
-import axios from "./../../axios/axios";
+import axios from "axios";
 function Signup() {
+  const link = axios.create({
+    baseURL: "https://backend.supamenu.rw/supapp/"
+  });
+  const navigate =useNavigate()
   const [password, setPassword] = useState(false);
   const [confirm, setConfirm] = useState(false);
   const [err, setErr] = useState(null);
@@ -62,22 +66,32 @@ function Signup() {
     "Password",
     "Confirm"
   ];
+
   async function handleSubmit(event) {
     event.preventDefault();
+    const newUser = {
+      email: values.Email,
+      firstName: values.Firstname,
+      lastName: values.Lastname,
+      mobile: values.Phone,
+      password: values.Password
+    };
     try {
-      const user = await axios.post("/api/auth/client/signup");
-      console.log(user.data);
-      console.log(user.status);
-    } catch (error) {
-      console.log(error);
+      const req = await link.post("/api/auth/admin/signup/", newUser, {
+        headers: {
+          accept: "*/*",
+          "Content-Type": "Application/json"
+        }
+      });
+      const res = req.data;
+      navigate('/pages/menu')
+    } catch (er) {
+      for (let i in er.response.data.apierror.details) {
+        setErr(er.response.data.apierror.details[i]);
+      }
+      console.log(er);
     }
   }
-  // const post = async (e) => {
-  //   e.preventDefault();
-  //   validate(values)
-  //     .then((data) => setErr(data))
-  //     .catch((err) => console.log(err));
-  // };
   return (
     <div className="w-full h-[100%] flex justify-center flex-row">
       <div
@@ -98,7 +112,11 @@ function Signup() {
         <h1 className="text-3xl font-bold text-center">
           Create your own account
         </h1>
-        {err && <Alert severity="error">{err}</Alert>}
+        {err && (
+          <Alert severity="error" className="truncate max-w-[25rem]">
+            {err}
+          </Alert>
+        )}
         <div className="flex gap-2 min-w-full overflow-hidden">
           {inputs.slice(0, 2).map((div, index) => (
             <div

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://backend.supamenu.rw/supapp/swagger-ui.html#/"
+  baseURL: "https://backend.supamenu.rw"
 });
 
 export default instance;
